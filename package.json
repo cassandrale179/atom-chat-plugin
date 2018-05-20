@@ -1,18 +1,22 @@
 {
-  "name": "my-package",
-  "main": "./lib/my-package",
+  "name": "eoko",
+  "main": "./lib/eoko",
   "version": "0.0.0",
   "description": "A short description of your package",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
-    "atom-workspace": "my-package:toggle"
+    "atom-workspace": "eoko:toggle"
   },
-  "repository": "https://github.com/atom/my-package",
+  "repository": "https://github.com/atom/eoko",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
   "dependencies": {
+    "express": "latest",
+    "moment": "^2.22.1",
+    "socket.io": "^2.1.1",
+    "socket.io-client": "^2.1.1",
+    "socketio-auth": "^0.1.1"
   }
 }

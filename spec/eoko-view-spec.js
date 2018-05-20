@@ -1,8 +1,8 @@
 'use babel';
 
-import MyPackageView from '../lib/my-package-view';
+import EokoView from '../lib/eoko-view';
 
-describe('MyPackageView', () => {
+describe('EokoView', () => {
   it('has one valid test', () => {
     expect('life').toBe('easy');
   });

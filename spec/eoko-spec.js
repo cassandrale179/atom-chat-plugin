@@ -1,44 +1,44 @@
 'use babel';
 
-import MyPackage from '../lib/my-package';
+import Eoko from '../lib/eoko';
 
 // Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 //
 // To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
 // or `fdescribe`). Remove the `f` to unfocus the block.
 
-describe('MyPackage', () => {
+describe('Eoko', () => {
   let workspaceElement, activationPromise;
 
   beforeEach(() => {
     workspaceElement = atom.views.getView(atom.workspace);
-    activationPromise = atom.packages.activatePackage('my-package');
+    activationPromise = atom.packages.activatePackage('eoko');
   });
 
-  describe('when the my-package:toggle event is triggered', () => {
+  describe('when the eoko:toggle event is triggered', () => {
     it('hides and shows the modal panel', () => {
       // Before the activation event the view is not on the DOM, and no panel
       // has been created
-      expect(workspaceElement.querySelector('.my-package')).not.toExist();
+      expect(workspaceElement.querySelector('.eoko')).not.toExist();
 
       // This is an activation event, triggering it will cause the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'my-package:toggle');
+      atom.commands.dispatch(workspaceElement, 'eoko:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
       });
 
       runs(() => {
-        expect(workspaceElement.querySelector('.my-package')).toExist();
+        expect(workspaceElement.querySelector('.eoko')).toExist();
 
-        let myPackageElement = workspaceElement.querySelector('.my-package');
-        expect(myPackageElement).toExist();
+        let eokoElement = workspaceElement.querySelector('.eoko');
+        expect(eokoElement).toExist();
 
-        let myPackagePanel = atom.workspace.panelForItem(myPackageElement);
-        expect(myPackagePanel.isVisible()).toBe(true);
-        atom.commands.dispatch(workspaceElement, 'my-package:toggle');
-        expect(myPackagePanel.isVisible()).toBe(false);
+        let eokoPanel = atom.workspace.panelForItem(eokoElement);
+        expect(eokoPanel.isVisible()).toBe(true);
+        atom.commands.dispatch(workspaceElement, 'eoko:toggle');
+        expect(eokoPanel.isVisible()).toBe(false);
       });
     });
 
@@ -51,11 +51,11 @@ describe('MyPackage', () => {
       // workspaceElement to the DOM are generally slower than those off DOM.
       jasmine.attachToDOM(workspaceElement);
 
-      expect(workspaceElement.querySelector('.my-package')).not.toExist();
+      expect(workspaceElement.querySelector('.eoko')).not.toExist();
 
       // This is an activation event, triggering it causes the package to be
       // activated.
-      atom.commands.dispatch(workspaceElement, 'my-package:toggle');
+      atom.commands.dispatch(workspaceElement, 'eoko:toggle');
 
       waitsForPromise(() => {
         return activationPromise;
@@ -63,10 +63,10 @@ describe('MyPackage', () => {
 
       runs(() => {
         // Now we can test for view visibility
-        let myPackageElement = workspaceElement.querySelector('.my-package');
-        expect(myPackageElement).toBeVisible();
-        atom.commands.dispatch(workspaceElement, 'my-package:toggle');
-        expect(myPackageElement).not.toBeVisible();
+        let eokoElement = workspaceElement.querySelector('.eoko');
+        expect(eokoElement).toBeVisible();
+        atom.commands.dispatch(workspaceElement, 'eoko:toggle');
+        expect(eokoElement).not.toBeVisible();
       });
     });
   });

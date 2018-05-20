@@ -1,0 +1,50 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle eoko",
+        "command": "eoko:toggle"
+      },
+      {
+        "label": "Toggle Authentication View",
+        "command": "eoko:toggleAuth"
+      },
+      {
+        "label": "Toggle Online Members View",
+        "command": "eoko:toggleOnlineMembers"
+      },
+      {
+        "label": "Toggle Tasks View",
+        "command": "eoko:toggleTasks"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "eoko",
+          "submenu": [
+            {
+              "label": "Toggle Messages View",
+              "command": "eoko:toggle"
+            },
+            {
+              "label": "Toggle Authentication View",
+              "command": "eoko:toggleAuth"
+            },
+            {
+              "label": "Toggle Online Members View",
+              "command": "eoko:toggleOnlineMembers"
+            },
+            {
+              "label": "Toggle Tasks View",
+              "command": "eoko:toggleTasks"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
