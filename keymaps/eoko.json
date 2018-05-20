@@ -1,5 +1,7 @@
 {
   "atom-workspace": {
-    "ctrl-alt-p": "eoko:toggle"
+    "ctrl-alt-p": "eoko:toggle",
+    "ctrl-alt-m": "eoko:toggleOnlineMembers",
+    "ctrl-alt-t": "eoko:toggleTasks"
   }
 }
