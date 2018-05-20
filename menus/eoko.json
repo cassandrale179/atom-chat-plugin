@@ -4,6 +4,14 @@
       {
         "label": "Toggle eoko",
         "command": "eoko:toggle"
+      },
+      {
+        "label": "Toggle Online Members View",
+        "command": "eoko:toggleOnlineMembers"
+      },
+      {
+        "label": "Toggle Tasks View",
+        "command": "eoko:toggleTasks"
       }
     ]
   },
@@ -15,8 +23,16 @@
           "label": "eoko",
           "submenu": [
             {
-              "label": "Toggle",
+              "label": "Toggle Messages View",
               "command": "eoko:toggle"
+            },
+            {
+              "label": "Toggle Online Members View",
+              "command": "eoko:toggleOnlineMembers"
+            },
+            {
+              "label": "Toggle Tasks View",
+              "command": "eoko:toggleTasks"
             }
           ]
         }
