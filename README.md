@@ -15,19 +15,19 @@ On MacOS:
 
 
 ## Possible Errors
-If encounter with this error when setting up a server: 
+* If encounter with this error when setting up a server: 
 ```
 lvl=warn msg="can't bind default web address, trying alternatives" obj=web addr=127.0.0.1:4040
 t=2018-06-04T13:23:24-0400 lvl=info msg="component stopped" obj=controller comp=web err="listen tcp 127.0.0.1:4040: bind: address already in use"
 ``` 
 
-Most likely a port is active even when Atom is closed. To check if a port is active (e.g port 4040): 
+* Most likely a port is active even when Atom is closed. To check if a port is active (e.g port 4040): 
 ```
 $ sudo lsof -i :4040 
 COMMAND  PID        USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
 ngrok   2233 cassandrale    6u  IPv4 0xa71dd35f156aa89d      0t0  TCP localhost:yo-main (LISTEN) 
 ```
-If a process is running, kill it with its PID: 
+* If a process is returned, kill it with its PID: 
 ``` 
 $ kill -9 2233 
 ``` 
