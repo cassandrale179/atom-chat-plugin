@@ -14,6 +14,19 @@ On MacOS:
 ``` 
 
 
+## Possible Errors
+If encounter with this error when setting up a server, most likely a port is active even when Atom is closed.
+To check if a port is active (e.g port 4040): 
+```
+$ sudo lsof -i :4040 
+COMMAND  PID        USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+ngrok   2233 cassandrale    6u  IPv4 0xa71dd35f156aa89d      0t0  TCP localhost:yo-main (LISTEN) 
+```
+If a process is running, kill it with its PID: 
+``` 
+$ kill -9 2233 
+``` 
+
 ## Useful Resources
 * Authentication with Socket.io: https://github.com/facundoolano/socketio-auth
 * Hacking Atom editor: https://flight-manual.atom.io/hacking-atom/sections/tools-of-the-trade/ 
