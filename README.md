@@ -33,7 +33,7 @@ $ kill -9 2233
 ``` 
 
 ## Current Issues + Updates
-* Bind: address has already been used (ngrok): this issue has been fixed by parsing port number and kill all its active proccesses. However, the chat doesn't automatically refresh despite server being cleared for running. Atom has to be restarted. 
+* **Bind: address has already been used (ngrok):** this issue has been fixed by parsing port number and kill all its active proccesses. However, the chat doesn't automatically refresh despite server being cleared for running. Atom has to be restarted. 
 
 ## Useful Resources
 * Authentication with Socket.io: https://github.com/facundoolano/socketio-auth
